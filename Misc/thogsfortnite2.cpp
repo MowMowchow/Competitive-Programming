@@ -37,6 +37,7 @@ int dfs(int curr, int prev, int tl, int currp){ // tl = timeleft,
                 }
             }
         }
+        temp = max(temp, res);
     }
     return temp;
 }
