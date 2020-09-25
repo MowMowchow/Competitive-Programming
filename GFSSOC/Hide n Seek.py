@@ -1,3 +1,4 @@
+import sys
 # bfs from g and to all the other h's (t-1) times
 # stored the result as adj list
 # dfs / spfa to find min
