@@ -9,6 +9,7 @@ int main(){
   memset(psav, 0, sizeof(psav));
 
   cin >> N;
+  
   for (int i = 0; i < N; i++){
     cin >> arr[i];
     psau[i+1] = psau[i] + arr[i];
