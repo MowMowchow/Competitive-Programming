@@ -64,5 +64,6 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "string": "cpp"
-    }
+    },
+    "editor.tabSize": 2
 }
