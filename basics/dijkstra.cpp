@@ -6,7 +6,7 @@ vector<int> curr;
 const int inf = 0x3f3f3f3f;
 
 struct Cmp {
-    bool operator()(vector<int>&a, vector<int>&b){ return a[1] < b[1];}
+    bool operator()(vector<int>&a, vector<int>&b){ return a[1] < b[1];} // direction of sign may be wrong
 };
 
 void dijkstra(int start){
