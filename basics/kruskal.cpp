@@ -39,7 +39,6 @@ int kruskal(){
         break;
       }
     }
-
   }
   return mst_weight;
 }
