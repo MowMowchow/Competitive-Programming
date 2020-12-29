@@ -6,7 +6,6 @@ for i in range(M):
   adj[a].append(b)
   adj[b].append(a)
 
-
 time = 0
 disc = [0 for x in range(N+1)]
 parent = [-1 for x in range(N+1)]
@@ -22,8 +21,6 @@ def dfs(curr):
   disc[curr] = time 
   low[curr] = time
   children = 0
-  
-
   for node in adj[curr]:
     if not vis[node]:
       children += 1
@@ -38,7 +35,7 @@ def dfs(curr):
     elif parent[curr] != node:
       low[curr] = min(low[curr], disc[node])
 
-
+      
 for i in range(1, N+1):
   if not vis[i]:
     dfs(i)
