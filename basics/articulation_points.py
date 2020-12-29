@@ -35,7 +35,7 @@ def dfs(curr):
     elif parent[curr] != node:
       low[curr] = min(low[curr], disc[node])
 
-
+      
 for i in range(1, N+1):
   if not vis[i]:
     dfs(i)
