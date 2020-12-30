@@ -26,21 +26,23 @@ void dfs(int curr, int prev){
         low[curr] = min(low[curr], low[node]);
         if (prev == -1 && children > 1){
           vector<vector<int>> temp;
-          while (s.size() > 0);
+          while (s.size() > 0){
             if (s.back() == vector<int>{curr, node}){
               temp.push_back(s.back()); s.pop_back();
               break;
             }
             temp.push_back(s.back()); s.pop_back();
+          }
           components.push_back(temp);
         } else if (low[node] >= disc[curr]){
           vector<vector<int>> temp;
-          while (s.size() > 0);
+          while (s.size() > 0){
             if (s.back() == vector<int>{curr, node}){
               temp.push_back(s.back()); s.pop_back();
               break;
             }
             temp.push_back(s.back()); s.pop_back();
+          }
           components.push_back(temp);
         }
       }
