@@ -32,7 +32,7 @@ def tarjan(curr, prev):
     temp = []
     while len(stack) > 0:
       instack[stack[-1]] = False
-      low[node] = disc[curr]
+      low[stack[-1]] = disc[curr]
       if stack[-1] == curr:
         temp.append(stack.pop(-1))
         break
