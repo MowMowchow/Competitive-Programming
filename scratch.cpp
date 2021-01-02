@@ -1,51 +1,55 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> prefix_function(string s) {
-    int n = (int)s.length();
-    vector<int> pi(n);
-    for (int i = 1; i < n; i++) {
-        int j = pi[i-1];
-        while (j > 0 && s[i] != s[j])
-            j = pi[j-1];
-        if (s[i] == s[j])
-            j++;
-        // cout << "at i: " << i << " | j: " << j << " | pi[i-1]: " << pi[i-1] << " | pi[i]: " << pi[i] << "\n";
-        pi[i] = j;
-    }
-    return pi;
-}
+
 
 int main(){
-  string s = "aabaaab";
-  int n = s.length();
-  vector<int> pi;
-  pi = prefix_function(s);
-  for (auto let: pi){
+  string s = "#a#b#a#a#b#c#";
+  int n = s.size();
+  vector<int> d1(n);
+  int k;
+  for (int i = 0; i < n; i++){
+    cout << i << " ";
+  } cout << "\n";
+  for (auto let: s){
+    cout << let << " ";
+  }cout << "\n";
+  for (int i = 0, l = 0, r = -1; i < n; i++) {
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+    cout << "at i: " << i << " | l: " << l << " | r: " << r << " \n";
+    if (i > r){
+      k = 1;
+    } else {
+      if (d1[l+r-i] > r-i+1){
+        k = r-i+1;
+        cout << "d1[l+r-i] = " << d1[l+r-i] << " > " << " r-i+1 = " <<  r-i+1 << "\n";
+      } else if (d1[l+r-1] < r-i+1){
+        k = d1[l+r-1];
+        cout << "d1[l+r-i] = " << d1[l+r-i] << " < " << " r-i+1 = " <<  r-i+1 << "\n";
+      } else {
+        k = d1[l+r-i];
+        cout << "d1[l+r-i] = " << d1[l+r-i] << " =" << " r-i+1 = " <<  r-i+1 << "\n";
+      }
+    }
+    while (0 <= i - k && i + k < n && s[i - k] == s[i + k]) {
+        k++;
+    }
+    d1[i] = k--;
+    cout << "final k: " << k << "\n";
+    if (i + k > r) {
+        l = i - k;
+        r = i + k;
+    }
+
+    for (auto let: d1){
+    cout << let << " ";
+  } cout << "\n";
+  }
+
+
+  for (auto let: d1){
     cout << let << " ";
   } cout << "\n";
 
-  vector<int> ans(n + 1);
-  for (int i = 0; i < n; i++)
-      ans[pi[i]]++;
-
-  for (auto ind: ans){
-    cout << ind << " ";
-  } cout << "\n";
-
-  for (int i = n-1; i > 0; i--)
-      ans[pi[i-1]] += ans[i];
-
-  for (auto ind: ans){
-  cout << ind << " ";
-  } cout << "\n";
-
-  for (int i = 0; i <= n; i++)
-      ans[i]++;
-  
-  for (auto ind: ans){
-    cout << ind << " ";
-  } cout << "\n";
-  
   return 0;
 }
