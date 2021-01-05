@@ -1,3 +1,3 @@
 # Competitive-Programming
  
-My solutions to various contest problems, primarily from dmoj.ca
+My solutions to competitive programming questions from various judges such as https://codeforces.com/ and https://dmoj.ca/
