@@ -1,31 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, arr[200000], l, r, mid, x;
-
+int houses[100010], a[10010], b[10010], s[10010], sum = 0;
 
 int main(){
+    int N,L,S;
+    cin >> N >> L >> S;
 
-  cin >> n;
-  for (int i = 0; i < n; i++){
-    cin >> arr[i];
-  }
-  cin >> x;
-  l = 0; r = n-1;
-
-  while (l < r){
-    mid = l+(r-l+1)/2;
-
-    if (arr[mid] == x){
-      return mid
+    memset(houses, 0, sizeof(houses));
+    
+    for (int i = 0; i<N; i++){
+        cin >> a[i] >> b[i] >> s[i];
+        for (int j = a[i]-1; j<b[i]; j++){
+            houses[j] += s[i];
+        }
+    }    
+    for (int i=0; i < L; i++){
+        if (houses[i] < S){
+            sum++;
+        }
     }
-    else if (arr[mid] < x){
-      l = mid;
-    } else {
-      r = mid-1;
-    }
-  }
-  
-  cout << l << "\n";
-
-  return 0;
+    cout << sum;
 }
