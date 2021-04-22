@@ -6,6 +6,13 @@
  "configurations": [
   {
     "type": "java",
+    "name": "Launch iq_test",
+    "request": "launch",
+    "mainClass": "iq_test",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
     "name": "Launch life_without_zeros",
     "request": "launch",
     "mainClass": "life_without_zeros",
