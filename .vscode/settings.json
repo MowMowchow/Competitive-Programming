@@ -65,5 +65,9 @@
         "valarray": "cpp",
         "string": "cpp"
     },
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "java.project.sourcePaths": [
+        "codeforces/1300-1400_ladder",
+        ""
+    ]
 }
