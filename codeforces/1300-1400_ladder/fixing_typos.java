@@ -1,25 +1,32 @@
 import java.io.*;
 import java.util.*;
 
-public class xor_and_or {
-  static String a, b;
-  static Boolean out = false, a_o = false, b_o = false;
+public class fixing_typos {
+  static String s, out = "";
+  static int n, nn;
+  static boolean skip = false;
   public static void main(String[] args) throws java.io.IOException{
     FastIn sc = new FastIn();
-    a = sc.readLine( nm7yunb nbbvc   l ;
-    b = sc.readLine();
-
-    if (a.length() == b.length()){
-      for (int i = 0; i < a.length(); i++){
-        if (a.charAt(i) == '1') {
-          a_o = true;
-        } if (b.charAt(i) == '1'){
-          b_o = true;
+    s = sc.readLine();
+    n = s.length();
+    
+    for (int i = 0; i < n; i++){
+      skip = false;
+      nn = out.length();
+      if (nn > 1){
+        if (out.charAt(nn-2) == out.charAt(nn-1) && out.charAt(nn-1) == s.charAt(i)){
+          skip = true;
         }
       }
-    } else { a_o = true;}
-
-    System.out.println(a_o == b_o? "YES" : "NO" );
+      if (nn > 2){
+        if (out.charAt(nn-3) == out.charAt(nn-2) && out.charAt(nn-1) == s.charAt(i)){
+          skip = true;
+        }
+      }
+      
+      if (!skip) out += s.charAt(i);
+    }
+    System.out.println(out);
   }
 
 
