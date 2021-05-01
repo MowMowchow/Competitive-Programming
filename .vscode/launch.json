@@ -6,6 +6,13 @@
  "configurations": [
   {
     "type": "java",
+    "name": "Launch fox_dividing_cheese",
+    "request": "launch",
+    "mainClass": "fox_dividing_cheese",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
     "name": "Launch dima_and_continuous_line",
     "request": "launch",
     "mainClass": "dima_and_continuous_line",
