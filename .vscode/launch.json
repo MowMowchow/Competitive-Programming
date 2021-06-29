@@ -5,11 +5,81 @@
  "version": "0.2.0",
  "configurations": [
   {
-   "name": "Python: Current File",
-   "type": "python",
-   "request": "launch",
-   "program": "${file}",
-   "console": "integratedTerminal"
+    "type": "java",
+    "name": "Launch fox_dividing_cheese",
+    "request": "launch",
+    "mainClass": "fox_dividing_cheese",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch dima_and_continuous_line",
+    "request": "launch",
+    "mainClass": "dima_and_continuous_line",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch coach",
+    "request": "launch",
+    "mainClass": "coach",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch ciel_and_flowers",
+    "request": "launch",
+    "mainClass": "ciel_and_flowers",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch maximum_absurdity",
+    "request": "launch",
+    "mainClass": "maximum_absurdity",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch fixing_typos",
+    "request": "launch",
+    "mainClass": "fixing_typos",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch xor_and_or",
+    "request": "launch",
+    "mainClass": "xor_and_or",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch iq_test",
+    "request": "launch",
+    "mainClass": "iq_test",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch life_without_zeros",
+    "request": "launch",
+    "mainClass": "life_without_zeros",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "type": "java",
+    "name": "Launch temp",
+    "request": "launch",
+    "mainClass": "temp",
+    "projectName": "competitive_programming_70db05af"
+  },
+  {
+    "name": "Python: Current File",
+    "type": "python",
+    "request": "launch",
+    "program": "${file}",
+    "console": "integratedTerminal"
   }
- ]
+]
 }
