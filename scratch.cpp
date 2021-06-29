@@ -1,31 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, arr[200000], l, r, mid, x;
+typedef long long ll;
+typedef vector<int> vec1i;
+typedef vector<vector<int>> vec2i;
+typedef vector<vector<vector<int>>> vec3i;
+typedef vector<ll> vec1ll;
+typedef vector<vector<ll>> vec2ll;
+typedef vector<vector<vector<ll>>> vec3ll;
 
 
 int main(){
-
-  cin >> n;
-  for (int i = 0; i < n; i++){
-    cin >> arr[i];
-  }
-  cin >> x;
-  l = 0; r = n-1;
-
-  while (l < r){
-    mid = l+(r-l+1)/2;
-
-    if (arr[mid] == x){
-      return mid
-    }
-    else if (arr[mid] < x){
-      l = mid;
-    } else {
-      r = mid-1;
-    }
-  }
-  
-  cout << l << "\n";
-
+  cout << " hi \n";
   return 0;
 }
