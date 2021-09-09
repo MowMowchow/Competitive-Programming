@@ -19,16 +19,15 @@ bool dijkstra(int cap){
   dist[A] = 0;
   while (!pq.empty()){
     vec1ll curr = pq.top(); pq.pop();
-    if (curr[1] == B) return curr[0] < C ? true : false;
+    if (curr[1] == B) return curr[0] <= C ? true : false;
     if (curr[0] > dist[curr[1]]) continue;
     for (auto node: adj[curr[1]]){
-      if (curr[0]+node[1] < dist[node[0]] && node[2] <= cap){
-        dist[node[0]] = curr[0]+node[1];
-        pq.push({dist[node[0]], node[0]});
-      }
+      if (curr[0]+node[1] < dist[node[0]] && node[2] <= cap)
+      dist[node[0]] = curr[0]+node[1];
+      pq.push({dist[node[0]], node[0]});
     }
   }
-  return dist[B] < C ? true : false;
+  return dist[B] <= C ? true : false;
 }
 
 int bs(){
